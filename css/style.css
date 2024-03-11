@@ -57,26 +57,76 @@ img{
 
 .sinistra{
     width: 30%;
+    
+}
 
-    /* debug */
-    background-color: aqua;
+.foto-sx{
+width: 14%;
+}
+
+.foto-sx>img{
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 5px 0 2px 5px;
+    aspect-ratio: 1;
+}
+
+.simboli-sx{
+    width: 50%;
+    text-align: end;
+    padding: 10px;
+    color: rgb(139, 137, 137);
 }
 
 .header-sx {
     height: 10%;
-    border: 1px solid black;
+    border-right: 1px solid  rgb(139, 137, 137);
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
 
-    /* debug */
-    background-color: yellow;
 }
 
 .notifiche{
     height: 10%;
+    background-color:#8edafc;
+    align-content: center;
+    flex-wrap: wrap;
+    padding-left: 5px;
 
     /* debug */
-    background-color: violet;
+    
     border: 1px solid black;
 }
+
+.togli-notifica{
+    width: 15%;
+    background-color: white;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1;
+    text-align: center;
+    
+}
+
+.togli-notifica>i{
+    padding: 8px 5px 5px 7px;
+   color:#8edafc ;
+      
+}
+
+.desc-notifica{
+    padding-left: 10px;
+}
+
+.desc-notifica>h5{
+    font-size: 0.7rem;
+}
+
+.desc-notifica>a{
+    font-size: 0.6rem;
+}
+
 
 .ricerca{
     height: 10%;
@@ -108,6 +158,19 @@ img{
     .lista-contatti{
         height: calc(90% - 1px);
     }
+
+    .simboli-sx{
+       display: none;
+    }
+    
+    .foto-sx{
+        width: 60%;
+     
+        }
+        .header-sx {
+            justify-content: center;
+        }
+
 }
 
 
@@ -146,13 +209,14 @@ img{
 
 .foto-dx {
     width: 12%;
-    height: 12%;
+    /* height: 12%; */
    
 }
 .foto-dx>img{
     border-radius: 50%;
     object-fit: cover;
-    padding: 2px 0 2px 5px;
+    padding: 5px 0 2px 5px;
+    aspect-ratio: 1;
 }
 
 .descrizione{
@@ -163,6 +227,7 @@ img{
 .descrizione>p{
    font-size: 0.5rem;
    color: rgb(139, 137, 137);
+   padding: 5px 0;
 }
 
 .simboli{
@@ -176,28 +241,57 @@ img{
     padding-left: 10px;
 }
 
+
+
+/* media header destra */
+
+@media screen and (max-width: 768px){
+    .foto-dx {
+        width: 13%;
+    }
+}
+
+
+
+@media screen and (max-width: 426px){
+    .foto-dx {
+        width: 20%;
+    }
+}
+
+
+
+
 /* main destra */
 
    .messaggi{
     height: calc(80% - 32px);
     background-image: url(../img/mine.jpg);
     padding: 15px;
-    overflow: visible;
+    overflow-y: scroll;
    
-
-
-  
    }
 
 .testo-verde{
     width: 60%;
-    background-color: green;
+    background-color:#d5f9ba;
     border-radius: 20px;
     padding: 5px 5px 5px 10px;
     float: right;
     margin-bottom: 20px;
     font-size: 0.8rem;
    
+}
+p{
+    padding: 5px;
+}
+
+.lateral-text{
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgb(139, 137, 137);
+    padding: 5px 7px 5px 5px;
+    font-size: 0.5rem;
 }
 
 .testo-bianco{
@@ -220,7 +314,7 @@ img{
 
     /* debug */
     /* background-color: blueviolet; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
    }
 
@@ -243,15 +337,15 @@ img{
    }
 
 .fa-face-smile{
-    padding-left: 9px;
-    padding-top: 7px;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 
 
    .fa-microphone{
-    padding-right: 9px;
-    padding-top: 7px;
+    padding-right: 10px;
+    padding-top: 10px;
     
    }
 

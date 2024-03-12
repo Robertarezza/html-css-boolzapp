@@ -13,7 +13,6 @@ img{
 
 
 
-
 /* utility*/
 
 
@@ -21,13 +20,31 @@ img{
     display: flex;
 }
 
+.foto{
+    width: 35px;
+}
+
+.foto>img{
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1;
+}
+
+button{
+    border: none;
+    background-color: #d6dbd8;
+    color: gray;
+    cursor: pointer;
+ 
+}
+
+
 
 
 .wrapper{
 
     height: 100vh;
     width: 100%;
-    /* background-color: #d6dbd8; */
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
@@ -38,11 +55,7 @@ img{
 .cont-principale{
     width: 75%;
     height: 85%;
-    /* margin: 0 auto; */
 
-    /* debug */
-    /* background-color: blue; */
-    border: 1px solid rgb(157, 154, 154);
 }
 
 
@@ -69,17 +82,6 @@ img{
     
 }
 
-.foto-sx{
-width: 35px;
-}
-
-.foto-sx>img{
-    border-radius: 50%;
-    object-fit: cover;
-    padding: 5px 0 2px 5px;
-    aspect-ratio: 1;
-}
-
 .simboli-sx{
     width: 50%;
     text-align: end;
@@ -94,6 +96,7 @@ width: 35px;
    align-items: center;
     flex-wrap: wrap;
     background-color: #d6dbd8;
+    padding-left: 10px;
 
 }
 
@@ -102,7 +105,7 @@ width: 35px;
     background-color:#8edafc;
     align-content: center;
     flex-wrap: wrap;
-    padding-left: 5px;
+    padding-left: 10px;
     border-right: 1px solid  #d6dbd8;
     
 }
@@ -176,7 +179,7 @@ width: 35px;
     border-bottom: 1px solid   #d6dbd8;
     background-color: white;
     align-items: center;
-    padding-left: 5px;
+    padding-left: 10px;
 }
 /*************************************/
 /*************************************/
@@ -191,18 +194,6 @@ width: 35px;
 /*************************************/
 /*************************************/
 
-
-
-.foto-cont{
-    width: 40px;
-    height: 40px; 
-   
-}
-
-.foto-cont>img{
-    border-radius: 50%;
-    aspect-ratio: 1;
-}
 
 .desc-contatti{
     flex-direction: column;
@@ -228,7 +219,7 @@ width: 35px;
 
 @media screen and (max-width: 768px) {
     .sinistra{
-      width: 76.6375px;
+      width: 76px;
        
     }
 
@@ -258,8 +249,8 @@ width: 35px;
        display: none;
     }
     
-    .foto-sx{
-        width: 37px;
+    .foto{
+        width: 40px;
      
         }
         .header-sx {
@@ -290,7 +281,6 @@ width: 35px;
 
     }
 
-
 /* header destra */
 
 .header-dx{
@@ -298,26 +288,16 @@ width: 35px;
     justify-content: space-between;
     align-items: center;
     background-color: #d6dbd8;
+    padding-left: 10px;
 }
 
 .nome {
     width: 50%;
     justify-content: flex-start;
-    align-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
-.foto-dx {
-    width: 35px;
-    
-   
-}
-.foto-dx>img{
-    border-radius: 50%;
-    object-fit: cover;
-    padding: 5px 0 2px 5px;
-    aspect-ratio: 1;
-}
 
 .descrizione{
     padding-left: 10px;
@@ -333,9 +313,11 @@ width: 35px;
 .simboli{
     width: 50%;
     text-align: end;
-    padding: 10px;
-    color: gray;
+    padding-right: 15px;
+   
 }
+
+
 
 .fa-solid{
     padding-left: 10px;
@@ -355,7 +337,7 @@ width: 35px;
 
 @media screen and (max-width: 426px){
     .foto-dx {
-        width: 20%;
+        width: 40px;
     }
 }
 
@@ -447,30 +429,32 @@ p{
    .cont-footer{
     width: 100%;
     height: 100%;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     color: gray;
     
    }
 
-   #footer{
-    width: 85%;
+   #scrivi{
+   flex-grow: 1;
     border-radius: 5px;
     padding: 2px;
     height: 70%;
     border: none;
    }
 
-.fa-face-smile{
-    padding-left: 10px;
-
+ .fa-face-smile{
+   padding: 0 7px;
+    font-size: 1.4rem;
 }
 
    .fa-microphone{
     padding-right: 10px;
-    
-    
+    font-size: 1.4rem;
+   }
+
+   .cont-footer>button {
+    background: none;
    }
 
 /* media cont destro */

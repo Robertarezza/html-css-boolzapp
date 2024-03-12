@@ -336,8 +336,12 @@ button{
 
 
 @media screen and (max-width: 426px){
-    .foto-dx {
+    .foto {
         width: 40px;
+    }
+
+    .simboli{
+        display: none;
     }
 }
 
@@ -420,10 +424,6 @@ p{
     height: 45px;
     background-color: #f3eeea;
 
-    /* debug */
-    /* background-color: blueviolet; */
-    /* border: 1px solid black; */
-
    }
 
    .cont-footer{
@@ -474,20 +474,19 @@ p{
       height: 100vh;
        
     }
-    .fa-microphone{
-        display: none;
-    }
-    .fa-face-smile{
-        display: none;
-    }
     
-    .simboli{
-        display: none;
-    }
     .cont-footer{
         justify-content: center;
     }
-    #footer{
+    #scrivi{
         width: 90%;
+        flex-grow: unset;
     }
+
+    button{
+        display: none;
+    }
+
+
+
 }

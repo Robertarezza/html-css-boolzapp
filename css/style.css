@@ -48,7 +48,12 @@ button{
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    background: linear-gradient(180deg, rgb(0, 150, 136),rgb(255, 255, 255),rgb(213, 219, 217));
+    background-image:
+    linear-gradient(to bottom,
+      #009688 0px,
+      #009688 15vh,
+      #dddbd1 15vh,
+      #d2dbdc 100%);
    
 }
 
@@ -98,6 +103,11 @@ button{
     background-color: #d6dbd8;
     padding-left: 10px;
 
+}
+
+.foto>h5{
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 .notifiche{
@@ -164,6 +174,12 @@ button{
    font-size: 0.7rem;
    color:  #d6dbd8;
 
+}
+
+
+/* toglie tipo il bordo quando ci clicchi sopra */
+#cerca:focus-visible{
+    outline: none;
 }
 
 .lista-contatti{
@@ -252,10 +268,15 @@ button{
     .foto{
         width: 40px;
      
-        }
-        .header-sx {
-            justify-content: center;
-        }
+     }
+     .header-sx {
+         justify-content: center;
+     }
+
+    .foto>h5{
+       display: none;
+    }
+
 
 }
 
@@ -278,7 +299,6 @@ button{
 
 .destra{
     width: 70%;
-
     }
 
 /* header destra */
@@ -328,12 +348,9 @@ button{
 /*************************************/
 /* media header destra */
 
-@media screen and (max-width: 768px){
-    
+@media screen and (max-width: 768px){   
 
 }
-
-
 
 @media screen and (max-width: 426px){
     .foto {
@@ -356,6 +373,8 @@ button{
     background-image: url(../img/mine.jpg);
     padding: 15px;
     overflow-y: scroll;
+    flex-direction: column;
+    display: flex;
    
    }
 
@@ -384,14 +403,16 @@ button{
 /*************************************/
 
 .testo-verde{
-    width: 60%;
+    max-width: 40%;
+    max-height: 60%;
     background-color:#d5f9ba;
     border-radius: 20px;
     padding: 5px 5px 5px 10px;
     float: right;
     margin-bottom: 20px;
     font-size: 0.8rem;
-   
+    align-self: flex-end;
+
 }
 p{
     padding: 5px;
@@ -407,14 +428,16 @@ p{
 }
 
 .testo-bianco{
-    width: 60%;
+    max-width: 40%;
+    min-width: 60%;
     background-color: white;
     border-radius: 20px;
     padding: 5px 5px 5px 10px;
     font-size: 0.8rem;
+    margin-bottom: 20px;
+    
    
 }
-
 
 
 
